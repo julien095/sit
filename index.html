@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ht">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Kenose Collège</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header" role="banner">
+    <a href="index.html" class="brand" title="Kenose Collège">
+      <!-- barre menu -->
+      <span class="logo" aria-hidden="true">
+       <img src="images logo.png" alt="kesone college" class="logo">
+        <svg width="36" height="36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kenose logo">
+          <rect rx="14" width="120" height="120" fill="#0b5cff"/>
+          <path d="M60 28 L94 54 L60 80 L26 54 Z" fill="#fff" opacity="0.95"/>
+        </svg>
+      </span>
+      <div>
+        <div class="site-title">Kenose Collège</div>
+        <div class="site-sub">Fòmasyon ak Valè</div>
+      </div>
+    </a>
+
+    <button id="burger" aria-label="Ouvri meni"><span class="lines"></span></button>
+
+    <nav role="navigation" aria-label="Menù prensipal">
+      <a href="index.html">Acceuil</a>
+      <a href="about.html">A propos de l'ecole</a>
+      <a href="classes.html">Classes</a>
+      <a href="teachers.html">Professeurs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container container-main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <h1 id="hero-title">Bienvenue au <span class="motto">Kenose Collège</span></h1>
+        <p>Présentation générale — Kenose Collège
+           Fondé sur les valeurs de la discipline, de la foi et du savoir, Kenose Collège est un établissement éducatif qui vise à former des citoyens responsables,
+           capables de penser de manière critique et d’agir avec compassion.
+           Situé au cœur de la communauté, le collège se distingue par son atmosphère familiale, 
+           son encadrement attentif et la qualité de son enseignement.
+           Notre devise : « Savoir pour servir » reflète notre conviction que la connaissance n’a de valeur que si elle contribue au bien de la société.
+           <strong>Nou itilize de (2) lang ofisyèl peyi a men preske tout kou yo fet an lang KREYOL</strong>
+        </p>
+        <p class="kv"><span class="badge">Edikasyon</span>&nbsp;<span style="color:var(--muted)">•</span>&nbsp;Fòmasyon pou lavni</p>
+        <p><a class="kv" href="contact.html"><button class="primary" type="button">Ekri Direksyon</button></a></p>
+      </div>
+
+      <figure aria-hidden="false" role="img" aria-label="Imaj lekòl la">
+        <!-- simple illustrative svg -->
+        <svg width="420" height="220" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+          <rect width="800" height="420" rx="12" fill="#eef2ff"/>
+          <g transform="translate(60,80)">
+            <rect width="680" height="220" rx="12" fill="#fff" stroke="#dbeafe"/>
+            <rect x="30" y="30" width="140" height="110" rx="8" fill="#0b5cff"/>
+            <rect x="240" y="30" width="140" height="110" rx="8" fill="#7c3aed"/>
+            <rect x="450" y="30" width="140" height="110" rx="8" fill="#ffb703"/>
+          </g>
+        </svg>
+      </figure>
+       
+      <aside class="biblio">
+        <img src="image biblio.jpg" alt="Bibliotek la">
+        <p>Bibliotek Kenose College la se yon kote ki trankil, kote elev yo ka etidye nomalman. 
+          li gen liv nan plizye domen tankou, Syans, Lang, Literati, Kont, elatriye</p><div class="></div>
+
+      </aside>
+
+    </section>
+
+    <section style="margin-top:18px" aria-labelledby="programs">
+      <h2 id="programs">Pwogram nou yo</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Matematik</h3>
+          <p>Aljèb, jeyometri, estatistik ak preparasyon pou egzamen.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Syans</h3>
+          <p>Bioloji, chimi, fizik ak aktivite laboratwa.</p>
+        </article>
+        <article class="card" role="listitem">
+          <h3>Lang</h3>
+          <p>Kreyòl, franse, angle — konpreyansyon, ekriti ak literati.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:18px">
+      <h2>Resous</h2>
+      <details>
+        <summary>Gade sèvis lekòl la</summary>
+        <ul>
+          <li>Bibliyotèk: liv ak materyèl referans</li>
+          <li>Laboratwa: ekipman syantifik</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+
+  <script>
+    // Tiny nav script (burger)
+    (function(){
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('nav');
+      if(!burger) return;
+      burger.addEventListener('click', ()=>{ nav.classList.toggle('open'); burger.classList.toggle('active'); });
+      document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', ()=>{ nav.classList.remove('open'); burger.classList.remove('active'); }));
+    })();
+  </script>
+</body>
+ <footer role="contentinfo">
+    <div class="container"><small>© Kenose Collège — Tout dwa rezève</small>
+     <address>Kenose Collège — Port-au-Prince • Téléfòn: +509 47269168</address>
+    </div>
+  </footer>
+</html>

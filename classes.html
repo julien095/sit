@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ht">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Klas — Kenose Collège</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header" role="banner">
+      <a href="index.html" class="brand" title="Kenose Collège">
+      <!-- barre menu -->
+      <span class="logo" aria-hidden="true">
+       <img src="images logo.png" alt="kesone college" class="logo">
+        <svg width="36" height="36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kenose logo">
+          <rect rx="14" width="120" height="120" fill="#0b5cff"/>
+          <path d="M60 28 L94 54 L60 80 L26 54 Z" fill="#fff" opacity="0.95"/>
+        </svg>
+      </span>
+      <div>
+        <div class="site-title">Kenose Collège</div>
+        <div class="site-sub">Fòmasyon ak Valè</div>
+      </div>
+    </a>
+
+    <button id="burger" aria-label="Ouvri meni"><span class="lines"></span></button>
+
+    <nav role="navigation" aria-label="Menù prensipal">
+      <a href="index.html">Dakèy</a>
+      <a href="about.html">Sou Lekòl</a>
+      <a href="classes.html">Klas</a>
+      <a href="teachers.html">Pwofesè</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Klas</h1>
+
+    <section aria-labelledby="mat">
+      <h2 id="mat">Matematik</h2>
+      <p>Silab: Aljèb, Jeyometri, Fonksyon, Estatistik. Objektif: devlope kapasite rezolisyon pwoblèm.</p>
+      <details>
+        <summary>Detay modil matematik</summary>
+        <ol>
+          <li>Aljèb </li>
+          <li>Jeyometri </li>
+          <li>Probabilite & Estatistik</li>
+        </ol>
+      </details>
+    </section>
+
+    <section aria-labelledby="sci" style="margin-top:12px">
+      <h2 id="sci">Syans</h2>
+      <p>Bioloji, Chimi ak Fizik — ak laboratwa. Aktivite: eksperyans, rapò syantifik ak egzèsis pratik.</p>
+    </section>
+
+    <section aria-labelledby="lang" style="margin-top:12px">
+      <h2 id="lang">Lang</h2>
+      <p>Kreyòl, Franse, Angle — kominikasyon, lekti, ak ekriti.</p>
+    </section>
+  </main>
+
+  
+  <script>
+    (function(){
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('nav');
+      if(!burger) return;
+      burger.addEventListener('click', ()=>{ nav.classList.toggle('open'); burger.classList.toggle('active'); });
+      document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', ()=>{ nav.classList.remove('open'); burger.classList.remove('active'); }));
+    })();
+  </script>
+</body>
+ <footer role="contentinfo">
+    <div class="container"><small>© Kenose Collège — Tout dwa rezève</small>
+     <address>Kenose Collège — Port-au-Prince • Téléfòn: +509 47269168</address>
+    </div>
+  </footer>
+
+</html>

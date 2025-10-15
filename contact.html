@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ht">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kontak — Kenose Collège</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+  <header class="container header" role="banner">
+    <a href="index.html" class="brand" title="Kenose Collège">
+      <!-- inline logo svg -->
+      <span class="logo" aria-hidden="true">
+       <img src="images logo.png" alt="kesone college" class="logo">
+        <svg width="36" height="36" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kenose logo">
+          <rect rx="14" width="120" height="120" fill="#0b5cff"/>
+          <path d="M60 28 L94 54 L60 80 L26 54 Z" fill="#fff" opacity="0.95"/>
+        </svg>
+      </span>
+      <div>
+        <div class="site-title">Kenose Collège</div>
+        <div class="site-sub">Fòmasyon ak Valè</div>
+      </div>
+    </a>
+
+    <button id="burger" aria-label="Ouvri meni"><span class="lines"></span></button>
+    <nav><a href="index.html">Dakèy</a><a href="about.html">Sou Lekòl</a><a href="classes.html">Klas</a><a href="teachers.html">Pwofesè</a><a href="contact.html">Kontak</a></nav>
+  </header>
+
+  <main class="container">
+    <h1>Kontak</h1>
+    <p>Ekri direksyon lekòl la atravè fòm sa a:</p>
+
+    <form id="contactForm" action="#" method="post" onsubmit="handleSubmit(event)" aria-label="Fòm kontak">
+      <label for="name">Non</label>
+      <input id="name" name="name" required placeholder="Non w">
+
+      <label for="email">Imèl</label>
+      <input id="email" name="email" type="email" required placeholder="ou@egzanp.com">
+
+      <label for="phone">Telefòn</label>
+      <input id="phone" name="phone" type="tel" placeholder="+509 ...">
+
+      <label for="subject">Sijè</label>
+      <select id="subject" name="subject">
+        <option>Enskripsyon</option>
+        <option>Enfòmasyon</option>
+        <option>Reklamasyon</option>
+      </select>
+
+      <label for="message">Mesaj</label>
+      <textarea id="message" name="message" rows="6" placeholder="Ekri mesaj ou a..."></textarea>
+
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="primary" type="submit">Voye</button>
+        <button type="reset">Efase</button>
+      </div>
+    </form>
+
+    <section style="margin-top:16px">
+      <h3>Adrès & Enfòmasyon</h3>
+      <p>43,rue de la Sagesse</P>
+      Port-au-Prince, Ayiti • Téléfòn: +509 47269168</p>
+      <address>Imèl: <a href="mailto:kenosemultiservices01@gmail.com">kenosemultiservices01@gmail.com</a></address>
+    </section>
+  </main>
+
+  
+
+  <script>
+    (function(){
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('nav');
+      if(burger){
+        burger.addEventListener('click', ()=>{ nav.classList.toggle('open'); burger.classList.toggle('active'); });
+        document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', ()=>{ nav.classList.remove('open'); burger.classList.remove('active'); }));
+      }
+    })();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      // DEMONSTRASYON: pou voye reyèlman, entegre API, Formspree, Netlify Forms, oswa script backend.
+      alert('Mèsi! Mesaj ou a resevwa (demonstrasyon).');
+      e.target.reset();
+    }
+  </script>
+</body>
+ <footer role="contentinfo">
+    <div class="container"><small>© Kenose Collège — Tout dwa rezève</small>
+     <address>Kenose Collège — Port-au-Prince • Téléfòn: +509 47269168</address>
+    </div>
+  </footer>
+
+</html>

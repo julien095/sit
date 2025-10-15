@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ht">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sou Lekòl — Kenose Collège</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="container header" role="banner">
+    <a href="index.html" class="brand" title="Kenose Collège">
+      <span class="logo" aria-hidden="true">
+        <img src="images logo.png" alt="kesone college" class="logo">
+        <!-- small svg -->
+        <svg width="36" height="36" viewBox="0 0 120 120">
+          <rect rx="14" width="120" height="120" fill="#0b5cff" />
+          <path d="M60 28 L94 54 L60 80 L26 54 Z" fill="#fff" />
+        </svg>
+      </span>
+      <div>
+        <div class="site-title">Kenose Collège</div>
+        <div class="site-sub">Fòmasyon ak Valè</div>
+      </div>
+    </a>
+    <button id="burger" aria-label="Ouvri meni"><span class="lines"></span></button>
+    <nav role="navigation" aria-label="Menù prensipal">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">A propos de l'ecole</a>
+      <a href="classes.html">Classes</a>
+      <a href="teachers.html">Professeurs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article>
+      <h1>Istwa Lekòl la</h1>
+      <p>Kenose Collège te etabli ak yon vizyon pou bay yon edikasyon ki mete aksan sou valè moral, ekselans akademik,
+      ak sèvis kominotè. Nou kwè nan fòmasyon holistik etidyan yo.
+      Kenose Collège est né d’un rêve partagé par plusieurs éducateurs passionnés qui croyaient que chaque enfant haïtien mérite une éducation complète : intellectuelle, morale et spirituelle.
+      Depuis sa création en 2008, l’école a grandi d’une petite structure communautaire à une institution reconnue pour son excellence académique.
+      Au fil des années, Kenose Collège a :
+      formé des centaines d’élèves qui ont poursuivi leurs études avec succès ;
+      mis en place des clubs éducatifs (lecture, mathématiques, sciences, arts) ;
+      développé des partenariats avec d’autres écoles et associations culturelles.
+      Aujourd’hui, Kenose Collège continue d’évoluer avec son temps tout en restant fidèle à sa mission d’instruire et d’inspirer.
+      </p>
+
+      <h2>Misyon</h2>
+      <p>Misyon nou se fòme jèn moun entèlijan, responsab, e k ap sèvi kominote a.</p>
+
+      <h3>Valè</h3>
+      <ul>
+        <li>Respè</li>
+        <li>Onètete</li>
+        <li>Exelans akademik</li>
+        <li>Angajman kominotè</li>
+      </ul>
+
+      <aside
+        style="margin-top:12px;padding:12px;border-left:4px solid var(--primary);background:linear-gradient(180deg,#fff,#fbfbff)">
+        <strong>Remake:</strong> Enskripsyon ouvri pandan peryòd ofisyèl yo. Kontakte direksyon pou plis enfòmasyon.
+      </aside>
+    </article>
+  </main>
+  <script>
+    (function () {
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('nav');
+      if (!burger) return;
+      burger.addEventListener('click', () => { nav.classList.toggle('open'); burger.classList.toggle('active'); });
+      document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.classList.remove('active'); }));
+    })();
+  </script>
+</body>
+ <footer role="contentinfo">
+    <div class="container"><small>© Kenose Collège — Tout dwa rezève</small>
+     <address>Kenose Collège — Port-au-Prince • Téléfòn: +509 47269168</address>
+    </div>
+  </footer>
+</html>

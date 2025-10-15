@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ht">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jan — Pwofesè Fransè — Kenose Collège</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header" role="banner">
+     <a href="index.html" class="brand" title="Kenose Collège">
+      <span class="logo" aria-hidden="true">
+        <img src="images logo.png" alt="kesone college" class="logo">
+        <!-- small svg -->
+        <svg width="36" height="36" viewBox="0 0 120 120">
+          <rect rx="14" width="120" height="120" fill="#0b5cff" />
+          <path d="M60 28 L94 54 L60 80 L26 54 Z" fill="#fff" />
+        </svg>
+      </span>
+      <div>
+        <div class="site-title">Kenose Collège</div>
+        <div class="site-sub">Fòmasyon ak Valè</div>
+      </div>
+    </a>
+    <button id="burger" aria-label="Ouvri meni"><span class="lines"></span></button>
+    <nav role="navigation" aria-label="Menù prensipal">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">A propos de l'ecole</a>
+      <a href="classes.html">Classes</a>
+      <a href="teachers.html">Professeurs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <main class="container" role="main">
+    <article style="display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:start">
+      <figure style="margin:0">
+        <!-- image can be a real jpg/png in images/; here we reference images/teacher-jan.svg -->
+        <img src="image 2.jpg" alt="Jan — Fransè" style="width:200px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,0.06)">
+        <figcaption style="font-size:13px;color:var(--muted);margin-top:8px">Jan — Fransè</figcaption>
+      </figure>
+
+        <aside class="biblio">
+        <img src="images 1.jpg" alt="Bibliotek la">
+        <p>Jan Filip se youn nan profese ki pefoman, li plen ane eksperyans, li se yon pasyone.
+          <a href="" class=""></a></p>
+
+      </aside>
+
+      <div>
+        <h1>Jan</h1>
+        <p><strong>Sijè:</strong> Fransè</p>
+        <p>Jan se yon pwofesè fransè ak plis pase 8 ane eksperyans. Li renmen literati ak konvèsasyon entèaktif. Metòd li anplwaye anpil dyalòg, lekti kritik, ak atelier ekriti.</p>
+
+        <section style="margin-top:12px">
+          <h3>Orè & Kontak</h3>
+          <p>Disponibilite: Lendi–Vandredi 08:00–15:00</p>
+          <p>Imèl: <a href="mailto:jan@kenose.edu.ht">jan@kenose.edu.ht</a></p>
+        </section>
+
+        <p style="margin-top:14px"><a href="teachers.html"><button class="primary" type="button">Retounen nan Galri Pwofesè</button></a></p>
+      </div>
+    </article>
+  </main>
+
+  
+  <script>
+    (function(){
+      const burger = document.getElementById('burger');
+      const nav = document.querySelector('nav');
+      if(!burger) return;
+      burger.addEventListener('click', ()=>{ nav.classList.toggle('open'); burger.classList.toggle('active'); });
+      document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click', ()=>{ nav.classList.remove('open'); burger.classList.remove('active'); }));
+    })();
+  </script>
+</body>
+ <footer role="contentinfo">
+    <div class="container"><small>© Kenose Collège — Tout dwa rezève</small>
+     <address>Kenose Collège — Port-au-Prince • Téléfòn: +509 47269168</address>
+    </div>
+  </footer>
+
+</html>
